@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+	<h1>Usuarios</h1>
+	{% for usuario in usuarios %}
+	<ul>
+		
+		<li> Usuario {{loop.index}}: 
+			<br>
+			<b>
+				Nombre: {{usuario.nombre}}
+				<br>
+				Edad: {{usuario.edad}}
+				<br>
+				pais: {{usuario.pais}}
+			</b>
+		</li>
+		
+	</ul>
+	{% endfor %}
+{% endblock %}
