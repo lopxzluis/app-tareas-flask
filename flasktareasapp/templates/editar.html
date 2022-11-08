@@ -3,6 +3,7 @@
 {% block body %}
 	<h1> editar tarea</h1>
 	<form action="{{url_for('actualizar', tarea_id = tarea_id)}}" method="post">
+		<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
 		<input type="text" name="editar_tarea" placeholder="editar">
 		
 		<button> editar </button>
